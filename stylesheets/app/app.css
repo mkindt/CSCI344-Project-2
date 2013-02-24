@@ -1,0 +1,120 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+body {
+  background-color:#f3f6e5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #797b72;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: bold;
+  line-height: 1.25
+}
+
+p, h5, label {
+  color: #665;
+  font-family:'Oxygen', sans-serif;
+}
+
+p {
+  color:#161816;
+  font-size: 10pt;
+}
+
+.biglabel {
+  font-size: 12pt;
+  padding: 5px;
+}
+
+h2 {
+  font-family: 'Averia Serif Libre', courier;
+  font-size: 50px;
+  color: black;
+  padding: 0 0 0 0;
+}
+
+.nav-bar {
+  color:black;
+}
+
+.top-bar {
+  background-color: #e5f2f5;
+  font-family: sans-serif;
+}
+
+
+.holder {
+	padding: 50px 0 50px 0;
+  margin-top:0px;
+  margin-bottom:15px;
+}
+
+.holder-big {
+	padding: 30px 30px 170px 30px;
+	background-image: -webkit-linear-gradient(bottom, rgba(243,246,229,0.5) 0%,
+  rgba(255,255,255,0.5) 100%);
+	background-image: linear-gradient(to top, rgba(243,246,229,0.5) 0%, 
+  rgba(255,255,255,0.5) 100%);
+	border-radius: 40px;
+}
+
+.center-box{
+  margin: 0 auto;
+  background-image: url(../../images/header3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-width: 100%;
+}
+
+.center-box-big {
+  padding:70px 0 50px 0;
+  margin: 0 auto;
+  background-image: url(../../images/tree_liquefy.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-width: 100%;
+}
+
+.main-content {
+  background-image: url(../../images/bg.jpg);
+}
+
+.main-content h2 {
+  font-size: 26pt;
+}
+
+.link-box {
+  text-align: center;
+}
+
+.bigbird {
+  background-image: url(../../images/owl2.png);
+}
+
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+

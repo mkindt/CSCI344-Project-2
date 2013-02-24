@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Tweet Beat: Tracking Trends Around the World</title>
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="stylesheets/lib/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/app/app.css">
+  <link href='http://fonts.googleapis.com/css?family=Averia+Serif+Libre' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Margarine' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+  <script src="javascripts/lib/modernizr.foundation.js"></script>
+</head>
+<body>
+  
+  <div class="center-box-big">
+    <div class="row">
+      <div class="six columns centered">
+        <div class="holder-big">
+          <div class="row">
+            <div class="four columns">
+              <img src="images/owl2.png" alt="TweetBeatOwl"/>
+            </div>
+            <div class="eight columns">
+              <h2>TweetBeat</h2>
+            </div>
+          </div>
+          <label class="biglabel">Discover trends in your neck of the woods.</label>
+          <div class="row">
+            <div class="row collapse">
+              <div class="nine mobile-three columns">
+                <input type="text" placeholder="City" />
+              </div>
+              <div class="three mobile-one columns">
+                <a class="button expand postfix">Search</a>
+              </div>
+            </div>     
+          </div>
+          <label class="biglabel">Or find trends in popular habitats:</label>
+          <div class="row">
+            <div class="five columns centered">
+              <label for="radio1" class="biglabel"><input name="radio2" type="radio" id="radio1"> New York City</label>
+              <label for="radio2" class="biglabel"><input name="radio2" type="radio" id="radio2"> Los Angeles</label>
+              <label for="radio3" class="biglabel"><input name="radio2" CHECKED type="radio" id="radio3"> Asheville</label>
+              <div class="six columns centered">
+                <a class="small radius button">Go</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="ten columns centered">
+      <div class="row">
+        <div class="four columns">
+          <h5>Welcome to TweetBeat!</h5>
+          <p>TweetBeat shows you the latest trends for your area.
+             Unlike other sites that rely on user submissions and ratings, TweetBeat uses
+             Twitter activity to gauge local popularity at its most current. 
+          </p>
+        </div>
+        <div class="four columns">
+          <h5>Tracking Area Activities!</h5>
+          <p>We help track area activities including popular restaurants, theaters, music
+             and other events, formal or informal, that might be happening. Really get an
+            understanding of the pulse of your swampland.
+          </p>
+        </div>
+        <div class="four columns">
+            <h5>Contribute!</h5>
+            <p>Want to contribute?  Submit ideas for organizing our data!</p>
+            <p><a href="#" data-reveal-id="exampleModal" class="button">Need help?</a></p>
+        </div>
+      </div>   
+    </div>
+  </div>
+  
+  <div id="exampleModal" class="reveal-modal bigbird">
+    <h2 style="color:blue">Mmrph.</h2>
+    <a class="close-reveal-modal">×</a>
+  </div>
+  
+  <footer>
+    <p>&copy; Owl 2013</p>
+  </footer>
+  
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  <script src="javascripts/jquery.js"></script><script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script><script src="javascripts/jquery.foundation.forms.js"></script><script src="javascripts/jquery.foundation.reveal.js"></script><script src="javascripts/jquery.foundation.orbit.js"></script><script src="javascripts/jquery.foundation.navigation.js"></script><script src="javascripts/jquery.foundation.buttons.js"></script><script src="javascripts/jquery.foundation.tabs.js"></script><script src="javascripts/jquery.foundation.tooltips.js"></script><script src="javascripts/jquery.foundation.accordion.js"></script><script src="javascripts/jquery.placeholder.js"></script><script src="javascripts/jquery.foundation.alerts.js"></script><script src="javascripts/jquery.foundation.topbar.js"></script><script src="javascripts/jquery.foundation.joyride.js"></script><script src="javascripts/jquery.foundation.clearing.js"></script><script src="javascripts/jquery.foundation.magellan.js"></script>
+  -->
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="javascripts/lib/jquery.js"></script>
+  <script src="javascripts/lib/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="javascripts/app/app.js"></script>
+
+  
+    <script>
+    $(window).load(function(){
+      $("#featured").orbit();
+    });
+    </script> 
+
+</body>
+</html>
