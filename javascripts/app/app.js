@@ -31,12 +31,15 @@
     });
     
     $(".locator").click(function() {
-    	var placeName = $("input").val();
+      var placeName = new Array();
+    	placeName[0] = $("input").val();
       $("footer").append("<p>"+placeName+"</p>");
-    
+      placeName[1] = "boston";
+      placeName[2] = "atlanta";    
       var twitter = new ctwitter.CTwitter();
-      console.log(placeName);
-      twitter.stream("statuses/filter", { track:placeName }, function (stream){
+      for (var i = 0; i<3; i++) {
+      console.log(placeName[i]);
+      twitter.stream("statuses/filter", { track:[placeName[i]] }, function (stream){
         stream.on("data", function(tweet) {
           console.log(tweet.text);
           if (count < 10){
@@ -57,6 +60,7 @@
           }
         });
       });
+    }
     });   
   });
 
