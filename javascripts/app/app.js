@@ -19,11 +19,16 @@
 
     $.fn.placeholder                ? $('input, textarea').placeholder() : null;
      
-    $('#menu').jqDock();
+    //$('#menu').jqDock();
+    var dockOptions2 =
+      { align: 'right' // vertical menu, with expansion LEFT from a fixed RIGHT edge
+      , labels: true
+      };
+      $('#menu').jqDock(dockOptions2);
     
     var count = 0;
     var rows = 0;
-
+    var blech;
     $(".locations").click(function() {
     	var toAdd = $("input:checked").val();
       $("footer").append("<p>"+toAdd+"</p>");
@@ -37,27 +42,30 @@
       placeName[1] = "boston";
       placeName[2] = "atlanta";    
       var twitter = new ctwitter.CTwitter();
+      // coordinates of NYC, Los Angeles and Asheville
+      var locationCoords = new Array("40.71455%2C-74.007118%2C3mi", "34.05349%2C-118.245323%2C10mi","35.598461%2C-82.553139%2C30mi");
       for (var i = 0; i<3; i++) {
       console.log(placeName[i]);
-      twitter.stream("statuses/filter", { track:[placeName[i]] }, function (stream){
+      var nonono = [placeName[i]];
+      twitter.stream("statuses/filter", { location:[locationCoords[i]], track:["traffic"] }, function (stream){
         stream.on("data", function(tweet) {
           console.log(tweet.text);
-          if (count < 10){
-            $(".content").append("<p class='tweet' style='display:none'>"+tweet.text+"</p>");
-            $(".tweet:eq("+count+")").fadeIn(1200);
+          if (count >= 0){
+            blech = ".losangeles";
+          }
+          if (count >= 10){
+            blech = ".asheville";
+          }
+          if (count >= 20){
+            blech = ".newyork";
+          }
+          var placetest= new Array(".asheville", ".boston", ".atlanta");
+          console.log(count, blech);
+         
+            $(blech).append("<p class='tweet' style='display:block'>"+tweet.text+"</p>");
+            //$(".tweet:eq("+count+")").fadeIn(1200);
             count = count + 1;
-          }
-          else {
-            if (rows===10){
-              rows = 0;
-            }
-            $(".tweet:eq("+rows+")").fadeOut(600, function() {
-              $(".tweet:eq("+rows+")").replaceWith(
-                "<p class='tweet' style='display:none'>"+tweet.text+"</p>");
-                $(".tweet:eq("+rows+")").fadeIn(600);
-                rows = rows + 1;
-            });
-          }
+    
         });
       });
     }
