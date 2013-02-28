@@ -167,8 +167,9 @@ if(!window.ctwitter) window.ctwitter = { };
 	    } else {
 		script.src = script.src+'?random='+Math.floor(Math.random()*10000);
 	    }
-
+      if (count < 2) { // ADDED THIS TO PREVENT REPEAT QUERIES - MDK
 	    head.appendChild(script);
+    }
 	};
     
 	/**
@@ -301,7 +302,7 @@ if(!window.ctwitter) window.ctwitter = { };
 		    lastID = buffer[0].id_str;
                     bufferTimeout = setTimeout(function () {
 			deliverData(stream);
-                    }, 750);
+                    }, 50); //originally 750 - sloww - MDK
 		} else {
 		    isStreaming = false;
 		}
@@ -366,8 +367,8 @@ if(!window.ctwitter) window.ctwitter = { };
 	    }
 
 
-        
-            twitterPoller.url('http://search.twitter.com/search.json?rpp=100&'+query+'&result_Type=recent&callback=*')
+        // MODIFIED rrp=100 to return less results -MDK
+            twitterPoller.url('http://search.twitter.com/search.json?rpp=11&'+query+'&result_Type=recent&callback=*')
 		.timeout(timeout)
 		.process(function (data) {
 		    var nextUrl
