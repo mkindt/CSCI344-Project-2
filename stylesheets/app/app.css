@@ -104,6 +104,10 @@ h2 {
 .link-box {
   text-align: center;
 }
+.link-box p {
+
+  font-family: 'Archivo Narrow', 'Oxygen', sans-serif;
+}
 
 .bigbird {
   background-image: url(../../images/owl2.png);

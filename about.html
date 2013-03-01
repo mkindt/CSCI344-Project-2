@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="stylesheets/app/app.css">
   <link href='http://fonts.googleapis.com/css?family=Averia+Serif+Libre' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
   <script src="javascripts/lib/modernizr.foundation.js"></script>
 </head>
 <body>
@@ -34,6 +35,7 @@
             <a href='about.html' title='HOME'>
               <img src='images/owl1.png' title='HOME' alt='' />
             </a>
+            <img src="images/book.png" title='LOOK UP' alt='' />
             <img src='images/tree_attrib.png' title='BRANCH OUT' alt='' />
             <img src='images/footprints.png' title='TRACK' alt='' />   
             <img src='images/grass_attrib.png' title='ABOUT' alt='' />
@@ -47,7 +49,7 @@
   
   <div class="center-box">
     <div class="row">
-      <div class="five columns centered">
+      <div class="five columns centered" id="returnSearch">
         <div class="holder">
           <div class="row">
             <div class="three columns">
@@ -58,7 +60,7 @@
             </div>
           </div>
           <label>Compare trends from around the world.</label>
-          <div class="row">
+          <div class="row" id="searchbox">
             <div class="row collapse">
               <div class="nine mobile-three columns">
                 <input type="text" placeholder="What's Up with..." />
@@ -68,7 +70,7 @@
               </div>
             </div>
             <p>Find out how your swamp compares. New York. Los Angeles. Asheville.</p>
-            <p>Try a term: traffic, happy, fun...</p>
+            <p>Try a term: traffic, food, tonight...</p>
           </div>
         </div>
       </div>
@@ -100,29 +102,18 @@
 
     <div class="row link-box">
       <div class="four columns newyork">
-        <div class="eight columns centered">
-          <h2>New York City</h2>
-          <img src="images/footprints.png" alt="footprints" />
-          <p>Track the latest trends.</p>
-        </div>
+        <h2>New York City</h2>
       </div>
       <div class="four columns asheville">
-        <div class="four columns centered">
-          <img src="images/book.png" alt="book" />
-        </div>
-        <div class="row">
-          <div class="ten columns centered">
-            <h2>Asheville</h2>
-            <p>Look up past trends.</p>
-          </div>
-        </div>
+        <h2>Asheville</h2> 
       </div>
       <div class="four columns losangeles">
-        <h2>Los Angeles</h2>  
-        <div class="six columns centered">  
-          <img src="images/tree_attrib.png" alt="test" />
-        </div>
-        <p style="margin-top: 25px;">Find other words to track.</p>
+        <h2>Los Angeles</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="eight columns centered">
+        <hr />
       </div>
     </div>
   </div>

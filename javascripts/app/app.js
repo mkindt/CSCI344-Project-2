@@ -36,18 +36,18 @@
     });
     
     $(".locator").click(function() {
-      var placeName = new Array();
-    	placeName[0] = $("input").val();
-      $("footer").append("<p>"+placeName+"</p>");
-      placeName[1] = "boston";
-      placeName[2] = "atlanta";    
+      $("#searchbox").fadeOut(600, function() {
+        $("#returnSearch").append(
+          "<a href='about.html' title='HOME'><h3>Search Again?</h3></a>");
+      });
+      var inputTrend;
+    	inputTrend = $("input").val();
+      $("footer").append("<p>"+inputTrend+"</p>");   
       var twitter = new ctwitter.CTwitter();
       // coordinates of NYC, Los Angeles and Asheville
       var locationCoords = new Array("40.71455%2C-74.007118%2C3mi", "34.05349%2C-118.245323%2C10mi","35.598461%2C-82.553139%2C30mi");
       for (var i = 0; i<3; i++) {
-      console.log(placeName[i]);
-      var nonono = [placeName[i]];
-      twitter.stream("statuses/filter", { location:[locationCoords[i]], track:["traffic"] }, function (stream){
+      twitter.stream("statuses/filter", { location:[locationCoords[i]], track:[inputTrend] }, function (stream){
         stream.on("data", function(tweet) {
           console.log(tweet.text);
           if (count >= 0){
@@ -59,7 +59,6 @@
           if (count >= 20){
             blech = ".newyork";
           }
-          var placetest= new Array(".asheville", ".boston", ".atlanta");
           console.log(count, blech);
          
             $(blech).append("<p class='tweet' style='display:block'>"+tweet.text+"</p>");
