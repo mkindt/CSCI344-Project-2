@@ -16,7 +16,6 @@
         );
       });
       inputTrend = $("input").val();
-      //$("#returnSearch").append("<p>This search:"+inputTrend+"</p>");
       twitter = new ctwitter.CTwitter();
       // coordinates of NYC, Los Angeles and Asheville
       locationCoords = ["40.71455%2C-74.007118%2C3mi", "34.05349%2C-118.245323%2C10mi", "35.598461%2C-82.553139%2C30mi"];
@@ -35,7 +34,6 @@
             }
             console.log(count, cityblock);
             $(cityblock).append("<p class='tweet' style='display:block'>" + tweet.text + "</p>");
-            //$(".tweet:eq("+count+")").fadeIn(1200);
             count = count + 1;
           });
         });
