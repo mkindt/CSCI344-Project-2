@@ -1,9 +1,9 @@
-if(!window.ctwitter) window.ctwitter = { };
-(function(package) {
-    function EventEmitter() {
-	var listeners, emits;
-	listeners = {};
-	emits = [];
+if (!window.ctwitter) window.ctwitter = { };
+(function (package) {
+  function EventEmitter() {
+    var listeners, emits;
+    listeners = {};
+    emits = [];
 	
 	//specifies the events that the emitter emits
 	//or returns an array of events that the emitter emits
